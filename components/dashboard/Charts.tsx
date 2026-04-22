@@ -26,20 +26,20 @@ export default function Charts({ bins }: { bins: Bin[] }) {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
       <Card>
-        <CardHeader className="pb-2">
+        <CardHeader className="pb-2 pt-4 px-4">
           <CardTitle className="text-sm font-semibold">Bin Fill Status Distribution</CardTitle>
         </CardHeader>
-        <CardContent className="h-64">
+        <CardContent className="h-48 md:h-64 px-2 md:px-4">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
                 data={pieData}
                 cx="50%"
                 cy="50%"
-                innerRadius={60}
-                outerRadius={80}
+                innerRadius={50}
+                outerRadius={70}
                 paddingAngle={5}
                 dataKey="value"
               >
@@ -56,14 +56,14 @@ export default function Charts({ bins }: { bins: Bin[] }) {
       </Card>
 
       <Card>
-        <CardHeader className="pb-2">
+        <CardHeader className="pb-2 pt-4 px-4">
           <CardTitle className="text-sm font-semibold">Weekly Collections Trend</CardTitle>
         </CardHeader>
-        <CardContent className="h-64">
+        <CardContent className="h-48 md:h-64 px-2 md:px-4">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={barData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-              <XAxis dataKey="name" fontSize={12} tickLine={false} axisLine={false} />
-              <YAxis fontSize={12} tickLine={false} axisLine={false} />
+            <BarChart data={barData} margin={{ top: 8, right: 8, left: -25, bottom: 0 }}>
+              <XAxis dataKey="name" fontSize={11} tickLine={false} axisLine={false} />
+              <YAxis fontSize={11} tickLine={false} axisLine={false} />
               <BarTooltip 
                  cursor={{ fill: 'rgba(0,0,0,0.05)' }}
                  contentStyle={{ borderRadius: '8px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}

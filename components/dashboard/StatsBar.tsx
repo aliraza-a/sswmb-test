@@ -46,18 +46,18 @@ export default function StatsBar({ bins, dumpPoints }: { bins: Bin[], dumpPoints
   ];
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-      {stats.map((stat, i) => (
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+      {stats.map((stat) => (
         <Card key={stat.title}>
-          <CardContent className="p-4 flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-muted-foreground">{stat.title}</p>
-              <h3 className="text-2xl font-bold">
+          <CardContent className="p-3 md:p-4 flex items-center justify-between">
+            <div className="min-w-0">
+              <p className="text-xs md:text-sm font-medium text-muted-foreground leading-tight truncate">{stat.title}</p>
+              <h3 className="text-xl md:text-2xl font-bold mt-0.5">
                 <AnimatedCounter value={stat.value} />
               </h3>
             </div>
-            <div className="h-4 w-4 text-muted-foreground">
-              <stat.icon size={20} />
+            <div className="shrink-0 text-muted-foreground ml-2">
+              <stat.icon size={18} />
             </div>
           </CardContent>
         </Card>

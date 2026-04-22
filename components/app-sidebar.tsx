@@ -119,17 +119,17 @@ export function AppSidebar({
         <SidebarGroup>
           <SidebarGroupLabel>Legend</SidebarGroupLabel>
           <SidebarGroupContent className="px-2 pt-2">
-            <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2.5">
               <div className="flex items-center gap-2">
-                <div className="h-3 w-3 rounded-full bg-emerald-500" />
-                <span className="text-xs text-muted-foreground">&lt; 50% Full (Healthy)</span>
+                <div className="h-3 w-3 shrink-0 rounded-full bg-emerald-500" />
+                <span className="text-xs text-muted-foreground">&#60; 50% Full (Healthy)</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="h-3 w-3 rounded-full bg-amber-500" />
+                <div className="h-3 w-3 shrink-0 rounded-full bg-amber-500" />
                 <span className="text-xs text-muted-foreground">50% - 89% Full (Warning)</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="h-3 w-3 rounded-full bg-red-500" />
+                <div className="h-3 w-3 shrink-0 rounded-full bg-red-500" />
                 <span className="text-xs text-muted-foreground">&ge; 90% Full (Critical)</span>
               </div>
             </div>
